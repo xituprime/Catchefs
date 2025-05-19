@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=JuegoFinal
+comment1.params=personajes
+comment1.target=JuegoFinal(java.util.List)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=lado\ x\ y
+comment3.target=void\ agregarTecla(java.lang.String,\ int,\ int)
+comment4.params=letra
+comment4.target=void\ liberarLetra(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ generarLetraUnica()
+numComments=6

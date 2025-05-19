@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Representa un personaje seleccionable con imagen.
+ * Representa un personaje seleccionable.
  */
 public class Personaje extends Actor
 {
@@ -14,8 +14,15 @@ public class Personaje extends Actor
 
     public void act() {
         if (Greenfoot.mouseClicked(this)) {
-            System.out.println("Seleccionaste al personaje: " + imagen);
-            // Aquí puedes hacer algo como iniciar el juego con este personaje
+            if (MundoJuego.personajesElegidos.size() < 2 &&
+                !MundoJuego.personajesElegidos.contains(imagen)) {
+
+                MundoJuego.personajesElegidos.add(imagen);
+                System.out.println("Seleccionado: " + imagen);
+
+                // Opcional: cambiar visualmente al personaje elegido
+                setImage(new GreenfootImage("images/" + imagen)); // o mostrar marco o texto
+            }
         }
     }
 }

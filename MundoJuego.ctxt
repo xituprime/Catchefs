@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=MundoJuego
-comment0.text=\r\n\ Este\ es\ el\ mundo\ del\ juego\ que\ se\ carga\ al\ iniciar\ partida.\r\n
 comment1.params=
 comment1.target=MundoJuego()
-numComments=2
+comment2.params=
+comment2.target=void\ act()
+numComments=3
