@@ -1,11 +1,17 @@
 #BlueJ class context
 comment0.target=Enemigo
-comment1.params=imagen\ lado
-comment1.target=Enemigo(java.lang.String,\ java.lang.String)
+comment1.params=imagen\ lado\ nombre\ textoX\ textoY
+comment1.target=Enemigo(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int)
 comment2.params=
-comment2.target=int\ getVida()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ reducirVida()
+comment3.target=void\ reducirIngredientes()
 comment4.params=
-comment4.target=java.lang.String\ getLado()
-numComments=5
+comment4.target=void\ actualizarTextoIngredientes()
+comment5.params=
+comment5.target=java.lang.String\ getNombre()
+comment6.params=
+comment6.target=int\ getIngredientesNecesarios()
+comment7.params=
+comment7.target=java.lang.String\ getLado()
+numComments=8
