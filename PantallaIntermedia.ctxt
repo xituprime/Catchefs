@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=PantallaIntermedia
+comment1.params=mensaje\ juego
+comment1.target=PantallaIntermedia(java.lang.String,\ JuegoFinal)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

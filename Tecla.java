@@ -1,24 +1,12 @@
 import greenfoot.*;
-import java.util.Arrays;
 import java.awt.Color;
 
-public class Tecla extends Actor
-{
+public class Tecla extends Actor {
     private String letra;
     private String lado;
     private boolean presionada = false;
-    private static final String[] TECLAS_IZQUIERDA = {"w", "a", "s", "d"};
-    private static final String[] TECLAS_DERECHA = {"up", "down", "left", "right"};
 
     public Tecla(String lado, String letra) {
-        // Validar que la tecla corresponda al lado correcto
-        if (lado.equals("izquierda") && !Arrays.asList(TECLAS_IZQUIERDA).contains(letra.toLowerCase())) {
-            throw new IllegalArgumentException("Tecla no válida para el jugador izquierdo: " + letra);
-        }
-        else if (lado.equals("derecha") && !Arrays.asList(TECLAS_DERECHA).contains(letra.toLowerCase())) {
-            throw new IllegalArgumentException("Tecla no válida para el jugador derecho: " + letra);
-        }
-        
         this.lado = lado;
         this.letra = letra;
         mostrarLetra();
@@ -47,16 +35,13 @@ public class Tecla extends Actor
     }
 
     private void mostrarLetra() {
-        // Mostrar las flechas como símbolos en lugar de texto
-        String imagenLetra = letra;
-        if (lado.equals("derecha")) {
-            switch (letra.toLowerCase()) {
-                case "up":    imagenLetra = "↑"; break;
-                case "down":  imagenLetra = "↓"; break;
-                case "left":  imagenLetra = "←"; break;
-                case "right": imagenLetra = "→"; break;
-            }
+        String mostrar = letra;
+        switch (letra.toLowerCase()) {
+            case "up": mostrar = "↑"; break;
+            case "down": mostrar = "↓"; break;
+            case "left": mostrar = "←"; break;
+            case "right": mostrar = "→"; break;
         }
-        setImage(new GreenfootImage(imagenLetra.toUpperCase(), 36, greenfoot.Color.YELLOW, new greenfoot.Color(0, 0, 0, 160)));
+        setImage(new GreenfootImage(mostrar.toUpperCase(), 36, greenfoot.Color.YELLOW, new greenfoot.Color(0, 0, 0, 160)));
     }
 }

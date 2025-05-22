@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 public class Enemigo extends Actor {
-    private int ingredientesNecesarios = 5; // Cambiamos "vida" por "ingredientesNecesarios"
+    private int vidas = 20; // Cambiamos "vida" por "ingredientesNecesarios"
     private String lado;
     private String nombre;
     private int textoX;
@@ -24,10 +24,10 @@ public class Enemigo extends Actor {
     }
 
     public void reducirIngredientes() { // Cambiado de reducirVida()
-        ingredientesNecesarios--;
+        vidas--;
         actualizarTextoIngredientes();
         
-        if (ingredientesNecesarios <= 0) {
+        if (vidas <= 0) {
             // Lógica cuando se consiguen todos los ingredientes
             getWorld().showText(nombre + " ¡Receta completa!", textoX, textoY - 30);
         }
@@ -35,7 +35,7 @@ public class Enemigo extends Actor {
 
     public void actualizarTextoIngredientes() {
         if (getWorld() != null) {
-            getWorld().showText(nombre + ": " + ingredientesNecesarios + " ingredientes", textoX, textoY);
+            getWorld().showText(nombre + ": " + vidas + " vidas", textoX, textoY);
         }
     }
     
@@ -43,6 +43,6 @@ public class Enemigo extends Actor {
         return nombre;
     }
 
-    public int getIngredientesNecesarios() { return ingredientesNecesarios; }
+    public int getIngredientesNecesarios() { return vidas; }
     public String getLado() { return lado; }
 }
