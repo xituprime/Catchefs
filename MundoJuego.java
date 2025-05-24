@@ -13,7 +13,7 @@ public class MundoJuego extends World
         showText("Elige 2 personajes", getWidth() / 2, 50);
 
         addObject(new Personaje("Gato1.png"), 200, 400);
-        addObject(new Personaje("Gato2.png"), 450, 400);
+        addObject(new Personaje("Gato2.png"), 700, 400);
     }
 
     public void act() {
